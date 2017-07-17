@@ -1,0 +1,19 @@
+{
+  "name": "gh-manager",
+  "version": "0.0.0",
+  "description": "A github project manager for organizations and personal accounts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielcsapo/gh-manager.git"
+  },
+  "author": "Gabriel J. Csapo <gabecsapo@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielcsapo/gh-manager/issues"
+  },
+  "homepage": "https://github.com/gabrielcsapo/gh-manager#readme"
+}
