@@ -25,6 +25,10 @@ Options:
   -h, --help           output usage information
 ```
 
+## Example
+
+![example](./screenshots/example.gif)
+
 ## Screenshots
 
 ![main](./screenshots/main.png)
