@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
-const CompressionPlugin = require('compression-webpack-plugin');
+
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     entry: './src/app.js',
@@ -39,7 +41,7 @@ if(process.env.NODE_ENV == 'production') {
   config.plugins = [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('development')
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -56,13 +58,12 @@ if(process.env.NODE_ENV == 'production') {
       }
     }),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new CompressionPlugin({
-			asset: "[path].gz[query]",
-			algorithm: "gzip",
-			test: /\.(js|html)$/,
-			threshold: 10240,
-			minRatio: 0.8
-		})
+    new HtmlWebpackPlugin({
+      filename: path.resolve(__dirname, 'dist', 'index.html'),
+      title: 'gh-manager',
+      inlineSource: '.(js|css)$'
+    }),
+    new HtmlWebpackInlineSourcePlugin()
   ]
 }
 

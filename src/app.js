@@ -5,6 +5,6 @@ import './style.css';
 
 import routes from './router';
 
-const mountNode = document.querySelector('#root');
+const mountNode = document.body;
 
 render(routes, mountNode);

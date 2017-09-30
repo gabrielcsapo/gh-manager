@@ -4,6 +4,7 @@ import React from 'react';
 import QS from 'querystring';
 
 import Layout from './layout';
+import Table from './table';
 
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
@@ -187,22 +188,7 @@ class Manage extends React.Component {
                 </div>
               : ''}
               { query && query.length > 0 ?
-                <table className="table responsive text-left">
-                  <thead>
-                    {keys.map(function(k) {
-                      return <th> { k }</th>
-                    })}
-                  </thead>
-                  <tbody>
-                    {query.map((v) => {
-                      return (<tr>
-                        {keys.map(function(r) {
-                          return <td> {v[r]} </td>
-                        })}
-                      </tr>);
-                    })}
-                  </tbody>
-              </table>
+                <Table keys={keys} query={query}/>
               : ''}
             </div>
           </div>

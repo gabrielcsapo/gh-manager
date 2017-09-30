@@ -9,14 +9,6 @@ const port = process.env.PORT || 8080;
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
-app.use((req, res, next) => {
-  console.log(req.headers);
-  if(req.originalUrl == '/build.js' && req.headers['accept-encoding'].indexOf('gzip') > -1) {
-    req.url += '.gz';
-    res.set('Content-Encoding', 'gzip');
-  }
-  next();
-});
 app.use(express.static('dist'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
