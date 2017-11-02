@@ -1,7 +1,7 @@
 {
   "name": "gh-manager",
   "version": "0.0.2",
-  "description": "A github project manager for organizations and personal accounts",
+  "description": "📋 A github project manager for organizations and personal accounts",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
