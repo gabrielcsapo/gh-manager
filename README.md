@@ -1,3 +1,5 @@
+> DEPRECATED: THIS WILL NO LONGER BE UNDER DEVELOPMENT
+
 # gh-manager
 
 > 📋 A github project manager for organizations and personal accounts
